@@ -99,3 +99,69 @@ html, body, #root {
 .animate-pulse-glow {
   animation: pulseGlow 4s infinite ease-in-out;
 }
+
+/* ─── Print Styles ───────────────────────────────────────────────────────── */
+@media print {
+  /* Page setup: reserve bottom margin for the fixed footer */
+  @page {
+    margin: 18mm 15mm 28mm 15mm; /* top right bottom left */
+    size: A4 portrait;
+  }
+
+  /* Reset dark backgrounds to white for print */
+  html, body, #root {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-family: 'Times New Roman', Times, serif !important;
+  }
+
+  /* Hide non-report UI elements */
+  nav,
+  header,
+  aside,
+  .no-print,
+  button:not(.print-keep),
+  [data-sidebar],
+  [data-nav] {
+    display: none !important;
+  }
+
+  /* Prevent page breaks inside cards */
+  .glass-card,
+  .glass-panel {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    border: 1px solid #ccc !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+
+  /* Footer: fixed at bottom of every printed page */
+  .print-footer {
+    display: block !important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding-top: 6pt;
+    border-top: 0.75pt solid #888888;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 9pt;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: #444444;
+    text-transform: uppercase;
+    background: #ffffff;
+    z-index: 9999;
+  }
+
+  /* Hide the footer in screen view */
+  @media screen {
+    .print-footer {
+      display: none !important;
+    }
+  }
+}

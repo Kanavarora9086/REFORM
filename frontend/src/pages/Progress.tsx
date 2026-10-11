@@ -501,6 +501,10 @@ export default function Progress() {
           </div>
         </Card>
       )}
+      {/* Print-only footer — rendered on every page when printing */}
+      <div className="print-footer" aria-hidden="true">
+        Designed and Developed by Kanav Arora
+      </div>
     </div>
   )
 }
