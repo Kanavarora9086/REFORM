@@ -1,0 +1,30 @@
+{
+  "name": "reform-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "1.4.0",
+    "framer-motion": "10.12.16",
+    "lucide-react": "0.296.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "6.14.1",
+    "recharts": "2.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "3.1.0",
+    "autoprefixer": "10.4.14",
+    "postcss": "8.4.27",
+    "tailwindcss": "3.4.7",
+    "typescript": "5.6.2",
+    "vite": "4.4.9"
+  }
+}
